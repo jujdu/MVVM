@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var profiles: [Profile]!
+    var viewModel: TableViewViewModelType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +20,7 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        profiles = [
-            Profile(name: "Misha", secondName: "Sidoruk", age: 25),
-            Profile(name: "Alibek", secondName: "Ismagulov", age: 25),
-            Profile(name: "Elon", secondName: "Musk", age: 48)
-        ]
+        viewModel = ViewModel()
     }
 
 
@@ -32,15 +28,17 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return profiles.count
+        return viewModel?.numberOfRows() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell {
-            let profile = profiles[indexPath.row]
             
-            cell.ageLbl.text = "\(profile.age)"
-            cell.fullNameLbl.text = "\(profile.name) \(profile.secondName)"
+            guard let viewModel = viewModel else { return UITableViewCell() }
+            
+            let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
+            
+            cell.viewModel = cellViewModel
             return cell
         }
         return UITableViewCell()

@@ -13,4 +13,11 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var fullNameLbl: UILabel!
     @IBOutlet weak var ageLbl: UILabel!
     
+    weak var viewModel: TableViewCellViewModelType? {
+        willSet(viewModel) {
+            guard let viewModel = viewModel else { return }
+            fullNameLbl.text = viewModel.fullName
+            ageLbl.text = viewModel.age
+        }
+    }
 }
