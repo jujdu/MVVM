@@ -12,6 +12,8 @@
 		6FD28AF3232C353800245EC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD28AF1232C353800245EC9 /* Main.storyboard */; };
 		6FD28AF5232C353A00245EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FD28AF4232C353A00245EC9 /* Assets.xcassets */; };
 		6FD28AF8232C353A00245EC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD28AF6232C353A00245EC9 /* LaunchScreen.storyboard */; };
+		6FD28B04232C4A1100245EC9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD28B03232C4A1100245EC9 /* Profile.swift */; };
+		6FD28B06232C4B8900245EC9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD28B05232C4B8900245EC9 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		6FD28AF4232C353A00245EC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FD28AF7232C353A00245EC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FD28AF9232C353A00245EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FD28B03232C4A1100245EC9 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		6FD28B05232C4B8900245EC9 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +60,30 @@
 			children = (
 				6FD28AED232C353800245EC9 /* AppDelegate.swift */,
 				6FD28AEF232C353800245EC9 /* ViewController.swift */,
+				6FD28B07232C4BE600245EC9 /* Model */,
+				6FD28B08232C4BEC00245EC9 /* View */,
 				6FD28AF1232C353800245EC9 /* Main.storyboard */,
 				6FD28AF4232C353A00245EC9 /* Assets.xcassets */,
 				6FD28AF6232C353A00245EC9 /* LaunchScreen.storyboard */,
 				6FD28AF9232C353A00245EC9 /* Info.plist */,
 			);
 			path = MVVM;
+			sourceTree = "<group>";
+		};
+		6FD28B07232C4BE600245EC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6FD28B03232C4A1100245EC9 /* Profile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6FD28B08232C4BEC00245EC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6FD28B05232C4B8900245EC9 /* TableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +158,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FD28AF0232C353800245EC9 /* ViewController.swift in Sources */,
+				6FD28B06232C4B8900245EC9 /* TableViewCell.swift in Sources */,
+				6FD28B04232C4A1100245EC9 /* Profile.swift in Sources */,
 				6FD28AEE232C353800245EC9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
