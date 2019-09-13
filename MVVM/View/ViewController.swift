@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel: TableViewViewModelType?
+    private var viewModel: TableViewViewModelType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +22,6 @@ class ViewController: UIViewController {
         
         viewModel = ViewModel()
     }
-
-
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
